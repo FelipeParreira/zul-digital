@@ -7,4 +7,5 @@ services:
       target: builder
     container_name: "app"
     volumes:
-      - .:/code
+      - ./src:/code/src
+      - ./tests:/code/tests
