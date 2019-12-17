@@ -11,5 +11,8 @@ test-app:
 	docker build -t zuldigital/engineer-exam . && \
 	docker run --rm zuldigital/engineer-exam
 
+lint:
+	$(DOCKER_CMP_COMMAND_EXEC) app npm run lint
+
 shutdown:
 	$(DOCKER_CMP_COMMAND) down

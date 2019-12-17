@@ -30,7 +30,7 @@ describe('breakTextIntoSections', () => {
   });
 
   it('should return an array of strings', () => {
-    testCases.forEach(testCase => {
+    testCases.forEach((testCase) => {
       const result = breakTextIntoSections(testCase);
       expect(Array.isArray(result)).toBeTruthy();
       expect(typeof result[0]).toBe('string');
@@ -38,7 +38,7 @@ describe('breakTextIntoSections', () => {
   });
 
   it('should return an array with at least one element', () => {
-    testCases.forEach(testCase => {
+    testCases.forEach((testCase) => {
       const result = breakTextIntoSections(testCase);
       expect(result.length).toBeGreaterThan(0);
       expect(result[0]).toBeDefined();
@@ -46,14 +46,14 @@ describe('breakTextIntoSections', () => {
   });
 
   it('should return strings that are limited in size', () => {
-    testCases.forEach(testCase => {
+    testCases.forEach((testCase) => {
       const words = testCase.split(/\s+/);
-      const maxWordLength = words.reduce((maxLength, word) =>  Math.max(word.length, maxLength), 0);
+      const maxWordLength = words.reduce((maxLength, word) => Math.max(word.length, maxLength), 0);
       const results = breakTextIntoSections(testCase, 45);
 
-      expect(results.every(result => {
+      expect(results.every((result) => {
         if (result.length === 1) return result.length <= maxWordLength;
-        else return result.length <= 45
+        return result.length <= 45;
       })).toBeTruthy();
     });
   });

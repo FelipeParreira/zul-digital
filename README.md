@@ -15,6 +15,9 @@
 ### Run unit tests
 `$ make test`
 
+### Run linter
+`$ make lint`
+
 ### Shutdown app
 `$ make shutdown`
 
