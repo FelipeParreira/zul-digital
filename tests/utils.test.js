@@ -57,4 +57,16 @@ describe('breakTextIntoSections', () => {
       })).toBeTruthy();
     });
   });
+
+  it('should return the expected result for a particular input', () => {
+    const testCase = 'Interferência na Av. Washington Luis sentido Bairro, próximo Praça. Comte. Linneu Gomes. Ocupa uma faixa. #ZS.';
+    const result = breakTextIntoSections(testCase, 45);
+    const expected = [
+      'Interferência na Av. Washington Luis sentido',
+      'Bairro, próximo Praça. Comte. Linneu Gomes.',
+      'Ocupa uma faixa. #ZS.',
+    ];
+
+    expect(result).toEqual(expected);
+  });
 });
