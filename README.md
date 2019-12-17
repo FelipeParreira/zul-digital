@@ -25,3 +25,4 @@
 * [NodeJS](https://nodejs.org/en/docs/)
 * [Axios](https://www.npmjs.com/package/axios)
 * [Jest](https://jestjs.io/docs/en/getting-started.html)
+* [ESLint](https://eslint.org/docs/user-guide/getting-started)
