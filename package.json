@@ -1,7 +1,11 @@
 {
   "name": "zuldigital",
   "version": "1.0.0",
-  "description": "",
+  "description": "An app that fetches tweets and prints one of them in a formatted way.",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:FelipeParreira/zul-digital.git"
+  },
   "main": "index.js",
   "scripts": {
     "test": "jest",
