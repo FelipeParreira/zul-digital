@@ -20,6 +20,7 @@ RUN npm install
 
 # Copy project
 COPY ./src ./tests /code/
+COPY ./.eslintrc.js /code/
 
 # Run starting command
 CMD ["npm", "run", "start-dev"]
